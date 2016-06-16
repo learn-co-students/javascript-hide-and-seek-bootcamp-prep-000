@@ -51,17 +51,4 @@ describe('index', () => {
       }
     })
   })
-
-  describe('fixRankedList()', () => {
-    it('reorders out-of-order .ranked-list', () => {
-      fixRankedList()
-
-      const rankedList = document.querySelectorAll('.ranked-list')[1]
-      const start = 10
-
-      for (let i = 0; i < 3; i++) {
-        expect(parseInt(rankedList.children[i].innerHTML)).to.equal(start + i)
-      }
-    })
-  })
 })
