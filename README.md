@@ -107,7 +107,7 @@ We could change the `.innerHTML` of these `li`s like so:
 ``` javascript
 const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li')
 
-for (let i = 0, l = lis.length; i < l; i++) {
+for (let i = 0; i < lis.length; i++) {
   lis[i].innerHTML = (i + 1).toString()
 }
 ```
