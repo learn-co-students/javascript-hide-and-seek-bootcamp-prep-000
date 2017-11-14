@@ -64,7 +64,7 @@ Selectors aren't limited to tag names, though (otherwise why not just use `docum
 </body>
 ```
 
-In the above example, the first query says, "Starting from `document` (the object we've called `querySelector()` on), find a `ul` with a `className` of `ranked-list` (the `.` is for `className`. Then find an `li` that is a child of that `ul`. Then find a `ul` that is a child (but not necessarily a direct descendant) of that `li`. Finally, find an `li` that is a child of that (second) `ul`."
+In the above example, the first query says, "Starting from `document` (the object we've called `querySelector()` on), find a `ul` with a `className` of `ranked-list` (the `.` is for `className`). Then find an `li` that is a child of that `ul`. Then find a `ul` that is a child (but not necessarily a direct descendant) of that `li`. Finally, find an `li` that is a child of that (second) `ul`."
 
 **NOTE**: The HTML property `class` is referred to as `className` in JavaScript. It's... unfortunate.
 
@@ -107,7 +107,7 @@ We could change the `.innerHTML` of these `li`s like so:
 ``` javascript
 const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li')
 
-for (let i = 0, l = lis.length; i < l; i++) {
+for (let i = 0; i < lis.length; i++) {
   lis[i].innerHTML = (i + 1).toString()
 }
 ```
