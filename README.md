@@ -9,6 +9,8 @@
 
 In this lab, we're going to practice finding elements in the DOM. To do so, we're going to make use of two methods that are immensely useful for navigating the DOM.
 
+Call `open index.html` from your terminal, open your Chrome developer tools and call `mocha.run()` from your console to run the tests.
+
 ### `querySelector()`
 
 `querySelector()` takes one argument, a string of [selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors), and returns the first element that matches these selectors. Given a document like
