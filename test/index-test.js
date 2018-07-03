@@ -1,21 +1,21 @@
 describe('index', () => {
   describe('getFirstSelector(selector)', () => {
     it('returns the first element that matches the selector', () => {
-      expect(getFirstSelector('div').id).toEqual('nested')
-      expect(getFirstSelector('.ranked-list')).toEqual(document.querySelector('.ranked-list'))
+      expect(getFirstSelector('div').id).to.equal('nested')
+      expect(getFirstSelector('.ranked-list')).to.equal(document.querySelector('.ranked-list'))
     })
   })
 
   describe('nestedTarget()', () => {
     it('pulls a .target out of #nested', () => {
-      expect(nestedTarget()).toEqual(document.querySelector('#nested .target'))
+      expect(nestedTarget()).to.equal(document.querySelector('#nested .target'))
     })
   })
 
   describe('deepestChild()', () => {
     it('returns the most deeply nested child in #grand-node', () => {
       console.log(deepestChild().innerHTML)
-      expect(deepestChild()).toBe(document.querySelector('#grand-node div div div div'))
+      expect(deepestChild()).to.equal(document.querySelector('#grand-node div div div div'))
     })
   })
 
@@ -30,14 +30,14 @@ describe('index', () => {
       let children = firstList.children
       let start = 1
       for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).toEqual(start + i + 3)
+        expect(parseInt(children[i].innerHTML)).to.equal(start + i + 3)
       }
 
       children = secondList.children
       start = 12
 
       for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).toEqual(start - i + 3)
+        expect(parseInt(children[i].innerHTML)).to.equal(start - i + 3)
       }
     })
   })
