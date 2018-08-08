@@ -8,11 +8,12 @@
 ## Introduction
 
 In this lab, we're going to practice finding elements in the DOM. To do so,
-we're going to make use of two methods that are immensely useful for navigating the DOM.
+we're going to make use of two methods that are immensely useful for navigating
+the DOM.
 
 If you are using the in-browser IDE, call `httpserver` in your IDE terminal or
-call `open index.html` if you are coding in a local environment. Then open your
-Chrome developer tools and call `mocha.run()` from your console to run the tests.
+call `open index.html` if you are coding in a local environment. Use the browser
+as a visual aid while solving this lab. Use `learn` to run the tests.
 
 #### `querySelector()`
 
