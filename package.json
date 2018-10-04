@@ -4,7 +4,7 @@
   "description": "Practice finding and updating nodes in the DOM",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+    "test": "mocha -R mocha-multi --reporter-options spec=-,json=.results.json"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "chai": "^4.1.2",
     "expect": "^1.20.2",
     "file-system": "^2.2.2",
-    "jsdom": "^9.2.1",
+    "jsdom": "~9.2.1",
     "mocha": "^5.2.0",
     "mocha-jsdom": "~1.1.0",
     "mocha-multi": "^1.0.1"
