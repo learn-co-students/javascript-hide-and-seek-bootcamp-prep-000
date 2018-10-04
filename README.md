@@ -129,8 +129,8 @@ We could change the `.innerHTML` of these `li`s like so:
 
 ```javascript
 const lis = document
-  .getElementById("app")
-  .querySelectorAll("ul.ranked-list li");
+  .getElementById('app')
+  .querySelectorAll('ul.ranked-list li');
 
 for (let i = 0; i < lis.length; i++) {
   lis[i].innerHTML = (i + 1).toString();
@@ -159,7 +159,7 @@ We'll handle loading everything up for you.
 - Define a function `increaseRankBy(n)` that increases the ranks in all of the
   `.ranked-list`s by `n`. (You might need to make use of [`parseInt()`][parseint]
 - Define a function `deepestChild()` that pulls out the most deeply nested child
-  from `div#grand-node`. (Remember, you can iterate over elements and call
+  element from `div#grand-node`. (Remember, you can iterate over elements and call
   `querySelector()` and `querySelectorAll()` on them. This is challenging to
   implement correctly, but not beyond your ability!)
 
