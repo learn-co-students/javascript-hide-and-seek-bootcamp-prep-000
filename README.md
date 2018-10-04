@@ -146,6 +146,26 @@ structure... (hint!).
 
 ## Instructions
 
+#### Instructions for In-Browser Learn IDE Users
+
+If you are using the Learn IDE available in your browser, you will automatically
+clone down the files you need when you click 'Open IDE', but in order to view
+`index.html`, you will need to use `httpserver` to serve the HTML page
+temporarily. In the terminal, type `httpserver` and press enter. You will see
+that `Your server is running at ...` followed by a string of numbers and dots.
+This string is a temporary IP address that is hosting your `index.html` file.
+Copy this string of numbers, open a new tab and past the string in to the URL
+bar.
+
+#### Instructions for Students Using an Stand Alone Text-Editor
+
+If you are using an standalone text editor such as Sublime or Atom, before we
+get started, follow [these instructions][instructions] to manually fork and
+clone the lesson repository on GitHub. In your forked and cloned copy, you'll
+find the `index.html` file, which you can then manually open up in the browser.
+(For instructions on opening HTML files in the browser from the Learn IDE,\ see
+[this Help Center article][help].)
+
 In `index.html`, you'll see that we've set up a basic document for you. We'll be
 testing against this document, but you should still write your code in `index.js`.
 We'll handle loading everything up for you.
@@ -159,7 +179,7 @@ We'll handle loading everything up for you.
 - Define a function `increaseRankBy(n)` that increases the ranks in all of the
   `.ranked-list`s by `n`. (You might need to make use of [`parseInt()`][parseint]
 - Define a function `deepestChild()` that pulls out the most deeply nested child
-  from `div#grand-node`. (Remember, you can iterate over elements and call
+  element from `div#grand-node`. (Remember, you can iterate over elements and call
   `querySelector()` and `querySelectorAll()` on them. This is challenging to
   implement correctly, but not beyond your ability!)
 
