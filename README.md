@@ -35,7 +35,8 @@ returns the first element that matches these selectors. Given a document like
 If we called `document.querySelector('div')`, the method would return the first
 `div` (whose `.innerHTML` is "Hello!").
 
-Selectors aren't limited to tag names, though (otherwise why not just use `document.getElementsByTagName('div')[0]`?). We can get very fancy.
+Selectors aren't limited to tag names, though (otherwise why not just use
+`document.getElementsByTagName('div')[0]`?). We can get very fancy.
 
 ```html
 <body>
@@ -74,10 +75,10 @@ Selectors aren't limited to tag names, though (otherwise why not just use `docum
 
 In the above example, the first query says, "Starting from `document` (the
 object we've called `querySelector()` on), find a `ul` with a `className` of
-`ranked-list` (the `.` is for `className`). Then find an `li` that is a child
-of that `ul`. Then find a `ul` that is a child (but not necessarily a direct
-descendant) of that `li`. Finally, find an `li` that is a child of that
-(second) `ul`."
+`ranked-list` (the `.` is for `className`). Then find an `li` that is a child of
+that `ul`. Then find a `ul` that is a child (but not necessarily a direct
+descendant) of that `li`. Finally, find an `li` that is a child of that (second)
+`ul`."
 
 **NOTE**: The HTML property `class` is referred to as `className` in JavaScript.
 It's... unfortunate.
@@ -122,8 +123,9 @@ Given a document like
 </main>
 ```
 
-If we called `document.getElementById('app').querySelectorAll('ul.ranked-list li')`,
-we'd get back a NodeList of `<li>1</li>, <li>2</li>, <li>10</li>, <li>11</li>`.
+If we called `document.getElementById('app').querySelectorAll('ul.ranked-list
+li')`, we'd get back a NodeList of `<li>1</li>, <li>2</li>, <li>10</li>,
+<li>11</li>`.
 
 We could change the `.innerHTML` of these `li`s like so:
 
@@ -167,21 +169,23 @@ find the `index.html` file, which you can then manually open up in the browser.
 [this Help Center article][help].)
 
 In `index.html`, you'll see that we've set up a basic document for you. We'll be
-testing against this document, but you should still write your code in `index.js`.
-We'll handle loading everything up for you.
+testing against this document, but you should still write your code in
+`index.js`. We'll handle loading everything up for you.
 
 - Define a function `getFirstSelector(selector)`, which accepts a selector and
   returns the first element that matches.
-- Define a function `nestedTarget()` that pulls a `.target` out of `#nested`
-  (`#` is used for IDs in selectors — but you knew that because you [read the docs][docs],
-  right? :) ). (Note that in `index.html` `#nested` and `.target` just
-  _happen_ to be `div`s. This method should work with arbitrary elements.)
+- Define a function `nestedTarget()` that pulls a child with a class `.target`
+  out of the parent with an Id of `#nested` (`#` is used for IDs in selectors —
+  but you knew that because you [read the docs][docs], right? :) ). (Note that
+  in `index.html` `#nested` and `.target` just _happen_ to be `div`s. This
+  method should work with arbitrary elements.)
 - Define a function `increaseRankBy(n)` that increases the ranks in all of the
-  `.ranked-list`s by `n`. (You might need to make use of [`parseInt()`][parseint]
+  `.ranked-list`s by `n`. (You might need to make use of
+  [`parseInt()`][parseint]
 - Define a function `deepestChild()` that pulls out the most deeply nested child
-  element from `div#grand-node`. (Remember, you can iterate over elements and call
-  `querySelector()` and `querySelectorAll()` on them. This is challenging to
-  implement correctly, but not beyond your ability!)
+  element from `div#grand-node`. (Remember, you can iterate over elements and
+  call `querySelector()` and `querySelectorAll()` on them. This is challenging
+  to implement correctly, but not beyond your ability!)
 
 **HINT 1**: Your solution for `deepestChild()` does not need to be totally
 generic; we don't expect it to work in every case. For example, we know that
