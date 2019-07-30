@@ -29,6 +29,8 @@ describe('index', () => {
 
       let children = firstList.children
       let start = 1
+
+      expect(children.length).to.equal(2);
       for (let i = 0, l = children.length; i < l; i++) {
         expect(parseInt(children[i].innerHTML)).to.equal(start + i + 3)
       }
@@ -36,6 +38,7 @@ describe('index', () => {
       children = secondList.children
       start = 12
 
+      expect(children.length).to.equal(3);
       for (let i = 0, l = children.length; i < l; i++) {
         expect(parseInt(children[i].innerHTML)).to.equal(start - i + 3)
       }
